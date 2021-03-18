@@ -1,0 +1,545 @@
+/* Colors
+dark gray: #212529
+blue: #1AA1E5
+light gray: #BCBEC0
+extra light gray: #F3F3F5
+*/
+
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+
+/* Global
+_______________________________________ */
+html {
+  box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #343434;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  display: grid;
+}
+img {
+  width: 300px;
+}
+a {
+  color: #1AA1E5;
+}
+a:hover {
+  text-decoration: none;
+}
+h1 {
+  font-size: 75px;
+  line-height: 1;
+  color: #1AA1E5;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+.content-wrap {
+  max-width: 850px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+.item-details h3 + p {
+  font-style: italic;
+}
+.item-details h3 ~ p {
+  margin: 0;
+}
+
+img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+/* Hamburger Menu
+----------------------------------------*/
+
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0;
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px; 
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+
+
+
+/* NAV
+_______________________________________ */
+.main-nav {
+ display: flex;
+ margin: 0px;
+ padding: 50px;
+ list-style: none;
+        }
+
+.main-nav li {
+	padding: .5em 1em;
+	font: normal 16px sans-serif;
+	color: #212529;
+	position: relative;
+	background: white;
+	cursor: point;
+}
+
+.push {
+ margin-left: auto;
+}
+
+nav ul li:hover {
+color: #1AA1E5;
+  }
+
+.left li {
+	font: bold 18px san-serif;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+/* HEADER
+_______________________________________ */
+	
+header {
+  background-color: #212529;
+  color: #CCC;
+}
+header img {
+  width: 100%;
+  height: 25em;
+  object-fit: cover;
+  object-position: center;
+}
+ 
+.intro {
+    text-align: center;
+  }
+figcaption {
+	font-size: 0.5em; 
+}
+
+/* PROJECTS
+_______________________________________ */
+
+.buckets {
+	background-color: #F3F3F5;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+.project-head {
+	text-align: center;
+	margin-top: 100px;
+	background-color: #F3F3F5;
+}
+
+/* ABOUT
+_______________________________________ */
+
+.about {
+	background-color: white;
+}
+
+
+
+/* BLOG
+_______________________________________ */
+
+.blog {
+	background-color: #6ABAE7;
+		margin: 0 auto;
+	padding: 60px 0;
+	
+}
+
+
+
+/* CONTACT
+_______________________________________ */
+.form {
+  background: white;
+}
+
+.contact-form {
+	line-height: 1.4;
+	max-width: 850px;
+	width: 85%;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+.form-head {
+	background: white;
+	text-align: center;
+	margin-bottom: 100px;
+}
+.form-group {
+	background: #CCC;
+	margin: 1em auto;
+	padding: 20px;
+}
+
+
+.submit-btn {
+	border-radius: 0px 2px 2px 0px;
+	box-sizing: content-box;
+	background: #212529;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: white;
+	padding: 0.35em 0.75em;
+	border: none;
+	font-size: 1.1em;
+	text-decoration: none;
+	cursor: pointer;
+	justify-content: center;
+}
+
+.submit-btn:hover, .submit-btn:focus {
+	background: #1AA1E5;
+}
+
+/* CONTACT FORM FLEX CODE
+_______________________________________ */
+.register-form {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -2em;
+}
+.form-group {
+	flex: 1 0 300px;
+	background: white;
+}
+.form-submit {
+	flex: 0 0 100%;
+}
+.form-fields li {
+	display: flex;
+	flex-wrap: wrap;
+}
+.form-fields input[type="text"],
+.form-fields input[type="tel"],
+.form-fields input[type="url"],
+.form-fields input[type="email"],
+.form-fields input[type="number"],
+.form-fields select {
+	flex: 1 0 230px;
+}
+.form-fields label {
+	flex: 1 0 90px;
+	max-width: 200px;
+}
+
+
+/* Buckets section */
+
+.buckets {
+	padding: 2em 1em 1em;
+	background: ##D9D9D9;
+}
+
+.buckets ul {
+	margin: 0;
+	padding: 0;
+}
+
+.buckets li {
+	margin-bottom: 1em;
+	background: white;
+	list-style-type: none;
+}
+
+.bucket {
+	padding: 1.5em;
+}
+
+.bucket-title:hover {
+	color: #1AA1E5;
+}
+
+/* CONTACT INFO / SOCIAL MEDIA
+_______________________________________ */
+footer {
+  background: #333333;
+  color: #F7FFF7;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+}
+.contact-list a {
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+}
+
+.right-footer {
+ margin-left: auto;
+}
+
+/* Responsive
+_______________________________________ */
+@media screen and (min-width:750px){
+  header, footer {
+    text-align: center;
+  }
+  .project-item img {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .contact-list {
+    display: flex;
+    justify-content: center;
+  }
+	
+	#menuToggle {
+		display: none;
+	}
+
+}
+
+
+@media screen and (max-width:749px){
+  h1 {
+    font-size: 75px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+  h2 {
+    line-height: 1;
+  }
+  .contact-list a {
+    padding: 5px;
+  }
+	
+  .main-nav {
+	display: none;
+  }
+
+}
+
+
+/*--------------------------------------------------------------
+Flex to create a three-bucket layout
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 700px) {
+	@supports (display: flex) {
+
+		.buckets ul {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.buckets li {
+			width: 31%;
+		}
+
+	}
+}
+
+/*--------------------------------------------------------------
+Basic responsive layout for all browsers:
+--------------------------------------------------------------*/
+
+.site {
+	max-width: 50em;
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+CSS Grid layout for modern browsers:
+--------------------------------------------------------------*/
+
+/* Check for CSS Grid support: */
+@supports (grid-area: auto) {
+
+	@media screen and (min-width: 600px) {
+
+		/* Disable fallback max-width center aligned rule: */
+		.site {
+			max-width: none;
+		}
+
+		/* Four-column layout: Two center columns have total width of 50em: */
+		.main-area > *,
+		.colophon {
+			display: grid;
+			grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+		}
+
+		/* Center items by placing them in the two center columns: */
+		.splash-content,
+		.more-content,
+		.buckets ul {
+			grid-column: 2/4;
+		}
+
+		/* Use automatic grid placement + span to let each item span two columns: */
+		.twin,
+		.colophon aside {
+			grid-column: 2 span;
+		}
+
+	}
+	
+}

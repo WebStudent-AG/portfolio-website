@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Part 4. Responsive Images</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+    body {font-size: 18pt;}
+  </style>
+</head>
+
+	<body>
+	<div style="text-align:center">
+<!-- Note to instructor: I could not make the effect work with the <div> and caption tags so I kept with <picture>. So, not only do I not have the text with the images, I have images side by side at large viewports when I would like them to be block elements, to stack on top of each other.-->
+	<h1>Responsive Images</h1>
+    <p>
+    This is me, Abby Garza. I am a web design student practicing with responsive images. I still have a ways to go, but I will succeed!
+  </p> 
+    <picture>
+      <source media="(max-width: 500px)" srcset="images/portrait450.jpg">
+      <source media="(max-width: 800px)" srcset="images/portrait750.jpg">
+      <source srcset="images/portrait1000.jpg">
+    <img src="images/portrait750.jpg"
+      alt="Artistic rendering of a self portrait">
+    </picture>
+		
+    <picture>
+      <source media="(max-width: 500px)" srcset="images/ben-kolde-Ajcipx1VDXI-unsplash450.jpg">
+      <source media="(max-width: 800px)" srcset="images/ben-kolde-Ajcipx1VDXI-unsplash750.jpg">
+      <source srcset="images/ben-kolde-Ajcipx1VDXI-unsplash1000.jpg">
+    <img src="images/ben-kolde-Ajcipx1VDXI-unsplash750.jpg"
+      alt="person holding space gray iPhone 6 displaying i design and develop experiences that make people's lives simple text">
+    </picture>
+	<p>Photo by Ben Kolde on Unsplash</p>
+	
+	<picture>
+      <source media="(max-width: 500px)" srcset="images/nikita-kachanovsky-bLY5JqP_Ldw-unsplash450.jpg">
+      <source media="(max-width: 800px)" srcset="images/nikita-kachanovsky-bLY5JqP_Ldw-unsplash750.jpg">
+      <source srcset="images/nikita-kachanovsky-bLY5JqP_Ldw-unsplash1000.jpg">
+    <img src="images/nikita-kachanovsky-bLY5JqP_Ldw-unsplash750.jpg"
+      alt="sign displaying think outside the box text set on a black chair sitting infront of a white wall">
+    </picture>
+	<p>Photo by Nikita Kachanovsky on Unsplash</p>
+	
+	</body>
+</html>
